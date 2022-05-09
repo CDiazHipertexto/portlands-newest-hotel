@@ -1,0 +1,123 @@
+
+#hero
+  position: relative
+  overflow: hidden
+  height: 100vh
+
+  .slider
+    margin: 0 auto
+    width: 100%
+    height: 80vh
+    position: relative
+    overflow: hidden
+
+    @media (max-width: 670px)
+      height: 580px
+      min-height: 580px
+
+    &:after
+      content: ""
+      display: block
+      width: 100%
+      height: 100%
+      position: absolute
+      bottom: 0
+      background-color: rgb(0 0 0 / 45%)
+      z-index: -2
+
+    .slides
+      display: flex
+      height: 100%
+      z-index: -3
+      position: relative
+
+    .slide
+      min-width: 100%
+      position: relative
+
+      img
+        object-fit: cover
+        position: absolute
+        top: 0
+        width: 100%
+        height: 100%
+
+    .slide-controls
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      svg
+        width: .7em
+        opacity: .5
+        transition: .3s ease-in-out
+        &:hover
+          opacity: 1
+        .st0
+          fill: #FFFFFF
+
+    #next-btn, #prev-btn
+      cursor: pointer
+      background: transparent
+      font-size: 30px
+      border: none
+      padding: 10px
+      color: white
+
+    #next-btn:focus, #prev-btn:focus
+      outline: none
+
+#section-intro
+  background-color: #000000
+  height: 20vh
+  @media (max-width: 670px)
+    height: 200px
+
+  .content-intro
+    position: absolute
+    margin: auto
+    left: 0
+    right: 0
+    top: -9em
+    background-color: black
+    color: $light
+    padding: 1em
+
+    &:before
+      max-width: 530px
+      height: 3px
+      content: ""
+      display: inline-block
+      position: absolute
+      left: 0
+      right: 0
+      top: -3px
+      transition: 0.3s all ease
+      transform: scaleX(1) translateY(100%)
+      background-color: #ffffff
+      z-index: 1
+      margin: auto
+
+    h1
+      text-align: center
+      font-weight: 300
+      padding-bottom: 9px
+      font-family: $font-family-serif
+      font-size: 3em
+      margin-bottom: .5em
+      margin-top: 0.2em
+      span
+        display: block
+        font-size: .55em
+
+    h6
+      text-align: center
+      font-weight: 400
+      font-size: .81em
+      max-width: 850px
+      margin: auto
+      line-height: 1.6

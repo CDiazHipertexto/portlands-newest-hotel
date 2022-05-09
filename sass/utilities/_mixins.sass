@@ -1,0 +1,75 @@
+// Mixin para textos
+@mixin text($size: null, $lineHeight: null, $weight: null)
+    // If the $size argument is not empty, then output the argument
+    @if $size != null
+        font-size: $size
+
+    // If the $lineHeight argument is not empty, then output the argument
+    @if $lineHeight != null
+        line-height: $lineHeight
+
+    // If the $weight argument is not empty, then output the argument
+    @if $weight != null
+        font-weight: $weight
+
+//El uso de valores recurrentes y valores undifine
+    .MyComponentTest
+        @include text(18px, null, 500)
+
+// o
+    .MyComponentTest
+        @include text($weight: 800, $size: 12px)
+
+// Mixin para Media queries
+@mixin x-plp
+    @media #{$mq-small}
+        @content
+
+@mixin sm-plp
+    @media #{$mq-medium}
+        @content
+
+@mixin md-plp
+    @media #{$mq-large}
+        @content
+
+@mixin lg-plp
+    @media #{$mq-xlarge}
+        @content
+
+@mixin lg-plp
+    @media #{$mq-xxlarge}
+        @content
+
+@mixin xl-plp
+    @media #{$mq-retina}
+        @content
+
+@mixin responsive($breakpoint)
+    @if $breakpoint == phoneXs-386
+        @media only screen and (max-width: 386px)
+            @content
+    @if $breakpoint == phoneXs
+        @media only screen and (max-width: 360px)
+            @content
+    @if $breakpoint == phone
+        @media only screen and (max-width: 600px)
+            @content
+    @if $breakpoint == tab-bt--tabs
+        @media only screen and (max-width: 520px)
+            @content
+    @if $breakpoint == tab-port-767
+        @media only screen and (max-width: 767px)
+            @content
+    @if $breakpoint == tab-port
+        @media only screen and (max-width: 900px)
+            @content
+    @if $breakpoint == tab-bt
+        @media only screen and (max-width: 991px)
+            @content
+    @if $breakpoint == tab-land
+        @media only screen and (max-width: 1400px)
+            @content
+    @if $breakpoint == big-desktop
+        @media only screen and (min-width: 1800px)
+            @content

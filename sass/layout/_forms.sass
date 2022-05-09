@@ -1,0 +1,334 @@
+#booknow
+  position: fixed
+  top: calc(12% - 50px)
+  right: 0
+  transform: translateY(0%) translateX(calc(100% + 0px))
+  border-right: 0
+  border-radius: 0 0 0 5px
+  padding: 0
+  font-size: 16px
+  display: flex
+  transition: 0.3s all ease
+  z-index: 40
+  @media (max-width: 425px)
+    font-size: 13px
+  &.active
+    transform: translateY(0%) translateX(0)
+  .wrapper-control
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0
+    color: #ffffff
+    background: #000000
+    left: -86px
+    -webkit-transform: rotate(-90deg)
+    transform: rotate(-90deg)
+    padding: 0.5em 1em
+    cursor: pointer
+    top: 116px
+    transition-duration: 0.3s
+    @media (max-width: 425px)
+      left: -69px
+    a
+      white-space: nowrap
+      color: #ffffff
+    &:hover
+      box-shadow: inset 0 0 0 2em #e21f25
+      a
+        color: #ffffff
+  .wrapper-form
+    background: #1e1e1e
+    color: #ffffff
+    padding: 2em
+    position: relative
+    .close-form
+      position: absolute
+      z-index: 1
+      left: 16px
+      top: 12px
+      width: 13px
+    .text-head-contact
+      text-transform: uppercase
+      font-family: $font-family-serif
+      font-size: 1.7em
+      text-align: center
+      margin-bottom: 1em
+    .body--wrap
+      display: flex
+      flex-direction: column
+      position: relative
+      label
+        font-size: .81em
+        font-weight: bold
+        position: absolute
+        top: -24px
+      .form--input, select
+        background-clip: padding-box
+        border: 1px solid rgba(94,94,94,.23)
+        -webkit-box-shadow: 0 20px 20px 0 rgb(0 0 0 / 0%)
+        box-shadow: 0 20px 20px 0 rgb(0 0 0 / 0%)
+        -webkit-box-sizing: border-box
+        box-sizing: border-box
+        display: block
+        font-size: .9em
+        line-height: 1.41
+        padding: .7em
+        width: 100%
+        -webkit-transition-duration: .15s
+        transition-duration: .15s
+        -webkit-transition-property: -webkit-box-shadow
+        transition-property: -webkit-box-shadow
+        transition-property: box-shadow
+        margin-bottom: 0
+        transition: .3s
+        cursor: pointer
+      .icon
+        position: absolute
+        background: #ffffff
+        z-index: 9
+        width: 30px
+        height: 30px
+        right: 3px
+        top: 6px
+        display: flex
+        align-items: center
+        justify-content: center
+        pointer-events: none
+        &:before
+          content: ''
+          height: 20px
+          width: 20px
+          background-repeat: no-repeat
+          position: absolute
+        &--calendar:before
+          background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16.7' style='enable-background:new 0 0 16 16.7;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23E22028;%7D%0A%3C/style%3E%3Cg%3E%3Cg%3E%3Crect x='5.7' y='1.8' class='st0' width='4.8' height='1'/%3E%3C/g%3E%3Cg%3E%3Cpolygon class='st0' points='15.7,15.3 14.7,15.3 14.7,14.9 14.9,2.8 12.9,2.8 12.9,1.8 15.9,1.8 '/%3E%3C/g%3E%3Cg%3E%3Cpolygon class='st0' points='1.1,15.3 0.1,15.3 0.1,14.9 0.3,1.8 3.2,1.8 3.2,2.8 1.2,2.8 '/%3E%3C/g%3E%3Cg%3E%3Crect x='1.5' y='15.6' class='st0' width='12.9' height='1'/%3E%3C/g%3E%3Cg%3E%3Crect x='0.8' y='6.1' class='st0' width='14.6' height='1'/%3E%3C/g%3E%3Cg%3E%3Cg%3E%3Crect x='3' y='8.8' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3Cg%3E%3Crect x='7.3' y='8.8' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3Cg%3E%3Crect x='11.5' y='8.8' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3Cg%3E%3Crect x='3' y='12.7' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3Cg%3E%3Crect x='7.3' y='12.7' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3Cg%3E%3Crect x='11.5' y='12.7' class='st0' width='1.5' height='1.5'/%3E%3C/g%3E%3C/g%3E%3Cg%3E%3Cpath class='st0' d='M1.6,16.6c-0.1,0-0.2,0-0.2,0c-0.6-0.1-1.1-0.6-1.3-1.2c0-0.1,0-0.2,0-0.3s0-0.2,0-0.3l1,0.2v0.1v0.1 c0,0.2,0.2,0.4,0.4,0.4l0.3,1C1.8,16.6,1.7,16.6,1.6,16.6z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st0' d='M14.2,16.6c-0.1,0-0.2,0-0.2,0l0.2-1h0.1c0.3,0,0.5-0.2,0.5-0.4v-0.1V15l1-0.2c0,0.1,0,0.2,0,0.3s0,0.2,0,0.3 c-0.1,0.6-0.6,1.1-1.3,1.2C14.4,16.6,14.3,16.6,14.2,16.6z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st0' d='M4.4,5.4c-1,0-1.7-0.8-1.7-1.7V1.8c0-1,0.8-1.7,1.7-1.7s1.7,0.8,1.7,1.7v1.8C6.2,4.6,5.4,5.4,4.4,5.4z M4.4,1.1C4,1.1,3.7,1.4,3.7,1.8v1.8C3.7,4,4,4.3,4.4,4.3s0.8-0.2,0.8-0.7V1.8C5.2,1.4,4.8,1.1,4.4,1.1z'/%3E%3C/g%3E%3Cg%3E%3Cpath class='st0' d='M11.7,5.4c-1,0-1.7-0.8-1.7-1.7V1.8c0-1,0.8-1.7,1.7-1.7s1.7,0.8,1.7,1.7v1.8C13.4,4.6,12.7,5.4,11.7,5.4z M11.7,1.1c-0.4,0-0.7,0.3-0.7,0.7v1.8c0,0.4,0.3,0.7,0.7,0.7s0.7-0.3,0.7-0.7V1.8C12.4,1.4,12.1,1.1,11.7,1.1z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+        &--arrow-up
+          width: 20px
+          height: 20px
+          top: 15px
+          &:before
+            height: 15px
+            width: 13px
+            background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='_x2014_ÎÓÈ_x5F_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 151 82.6' style='enable-background:new 0 0 151 82.6;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23E31F26;%7D%0A%3C/style%3E%3Cg%3E%3Cpolygon class='st0' points='75.5,82.2 0.7,7.5 7.8,0.4 75.5,68.1 143.2,0.4 150.3,7.5 '/%3E%3C/g%3E%3C/svg%3E%0A")
+    .text-footer-contact
+      text-transform: uppercase
+      font-family: $font-family-serif
+      font-size: .8em
+      text-align: center
+      margin: 1em 0
+      display: flex
+      align-items: center
+      justify-content: center
+      img
+        width: 20px
+        margin-left: 1em
+        transition: .3s
+      &:hover
+        img
+          transform: translate3d(10px,0%,0) rotate(0deg)
+    .col-press
+      margin-bottom: 2.5em
+    .row-flex
+      display: flex
+      justify-content: space-between
+      .col-press-6
+        width: 45%
+    .btn
+      margin: auto
+    .data-form
+      font-size: 9px
+      margin-top: 8px
+    .result
+      color: $OrangeHex
+form
+  span.validity
+    position: absolute
+    right: -34px
+    width: 30px
+    height: 30px
+    top: 11px
+    z-index: 99
+    font-size: .8em
+    &::after
+      content: ""
+  input:invalid + span::after, select:invalid + span::after
+    content: "✖"
+    color: #f00
+  input:valid + span::after, select:valid + span::after
+    color: #45b200
+    content: "✓"
+
+  .ui-message-error
+    color: #ff93a1
+    position: absolute
+    left: 0
+    font-size: 0.7em
+    bottom: -18px
+    justify-content: center
+    align-items: center
+    text-align: left
+    transition: .3s
+    padding: 0 0 0
+    display: none
+    &.active
+      display: flex
+
+.wrapper--lead-form
+  width: 100%
+  min-height: 100%
+  color: #ffffff
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  padding: 0.5em
+  line-height: 1
+  pointer-events: visible
+  flex-direction: column
+  justify-content: center
+
+  h2
+    font-size: 1.5em
+    font-weight: 300
+    margin-bottom: 1em
+    position: relative
+
+    span
+      font-weight: bold
+      color: #e65a24
+
+    &:before
+      content: ""
+      position: absolute
+      top: 109%
+      left: 50%
+      margin-left: -5px
+      border-width: 5px
+      border-style: solid
+      border-color: #29a0d7 transparent transparent transparent
+
+    &:after
+      content: ""
+      position: absolute
+      width: 100%
+      left: 0
+      right: 0
+      margin: auto
+      bottom: -5px
+      border-bottom: #29a0d7 solid 2px
+
+  .alert.alert-danger
+    position: absolute
+    font-size: 10px
+    padding: 1em
+    margin: auto
+    left: 0
+    right: 0
+    width: max-content
+    top: 47px
+
+
+  form
+    padding: 0 2em
+    margin-top: 0
+    width: 100%
+
+    .body--wrap
+      width: 100%
+      position: relative
+      margin-bottom: 1.3em
+
+      .focus-input2
+        position: absolute
+        display: block
+        width: 100%
+        height: 100%
+        top: -24px
+        left: 0
+        pointer-events: none
+        color: #999999
+        margin-bottom: 1.3em
+        top: 13px
+        left: 11px
+
+        &.float
+          &:after
+            top: -9px !important
+            font-size: .75em !important
+
+          &:before
+            top: -9px !important
+            font-size: .75em !important
+            opacity: 0.8
+
+        &:after
+          content: attr(data-placeholder)
+          display: block
+          position: absolute
+          top: 0
+          left: 24px
+          line-height: 1.2
+          -webkit-transition: all 0.4s
+          -o-transition: all 0.4s
+          -moz-transition: all 0.4s
+          transition: all 0.4s
+          font-size: .81em
+          font-weight: 400
+          font-family: 'Montserrat', sans-serif
+
+        &:before
+          opacity: 1
+          left: 0
+          display: block
+          position: absolute
+          top: 2px
+          line-height: 1.2
+          transition: all 0.4s
+          font-size: .75em
+
+    input
+      &.landing-cpa--input:focus
+        + .focus-input2::after
+          top: -9px !important
+          font-size: .75em !important
+          opacity: 0.8
+
+        .float
+          &:after, &:before
+            top: -9px !important
+            font-size: .75em !important
+            opacity: 0.8
+
+        + .focus-input2::before
+          top: -9px !important
+          font-size: .75em !important
+          opacity: 0.8
+
+      width: 100%
+      min-height: 43px
+      display: block
+      padding: 8px 40px 0px 8px
+      border-radius: 0
+      border: 1px solid #e8e8e8
+      background: #fff
+      font-size: 14px
+      font-family: 'Montserrat', sans-serif
+@media all and (max-width: 991px)
+  .btn--green
+    width: 100%
+
+@media all and (max-width: 991px)
+  .ui-message-error
+    bottom: -9px
+
+@media all and (max-width: 991px)
+  form
+    margin-top: 0
+
+@media all and (max-width: 991px)
+  form .body--wrap
+    margin-bottom: 9px
